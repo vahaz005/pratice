@@ -32,7 +32,7 @@ jobs:
             nvm use 24
 
             echo "🔹 Moving to app directory"
-            cd /pratice
+            cd pratice
 
             echo "🔹 Pulling latest code"
             git pull origin main
