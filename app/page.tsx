@@ -2,64 +2,79 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <section className="hero">
+        <div className="l-container">
+          <div className="copy">
+            <h1>Learnio — Build skills, measure progress, empower teams</h1>
+            <p>
+              A modern learning management platform for schools and teams. Create
+              beautiful courses, track learner progress, and deliver engaging
+              experiences at scale.
+            </p>
+            <div className="cta">
+              <a className="btn primary" href="#signup">Get started — it's free</a>
+              <a className="btn ghost" href="#features">See features</a>
+            </div>
+            <div style={{marginTop:18}}>
+              <small style={{color:'var(--muted)'}}>Trusted by instructors and teams worldwide</small>
+            </div>
+          </div>
+
+          <div className="hero-visual">
+            <div className="card" style={{width:360}}>
+              <div style={{display:'flex',justifyContent:'space-between',marginBottom:12,alignItems:'center'}}>
+                <strong>Intro to Product Design</strong>
+                <span style={{color:'var(--muted)',fontSize:12}}>12 lessons</span>
+              </div>
+              <div style={{height:8,background:'#e6eefc',borderRadius:8,overflow:'hidden',marginBottom:12}}>
+                <div style={{width:'52%',height:'100%',background:'linear-gradient(90deg,var(--accent-1),var(--accent-2))'}} />
+              </div>
+              <p style={{margin:0,color:'var(--muted)',fontSize:14}}>Engaging videos, quizzes and hands-on projects. Track completions and certifications.</p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section id="features" className="l-container">
+        <h2 style={{marginTop:0}}>Features that scale learning</h2>
+        <div className="features">
+          <div className="feature card">
+            <h3>Authoring tools</h3>
+            <p>Create interactive lessons, quizzes and assignments quickly.</p>
+          </div>
+          <div className="feature card">
+            <h3>Analytics & reporting</h3>
+            <p>Monitor learner progress and measure outcomes with built-in analytics.</p>
+          </div>
+          <div className="feature card">
+            <h3>Integrations</h3>
+            <p>Connect to your LMS, SSO, calendar, and content libraries.</p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="pricing" className="l-container">
+        <div className="cta-section card">
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:20,flexWrap:'wrap'}}>
+            <div>
+              <h3 style={{margin:'0 0 6px'}}>Simple transparent pricing</h3>
+              <p style={{margin:0,color:'var(--muted)'}}>Start free — upgrade when your team grows.</p>
+            </div>
+            <div style={{display:'flex',gap:12}}>
+              <a className="btn ghost" href="#">Try free</a>
+              <a className="btn primary" href="#signup">Contact sales</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="l-container">
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:12}}>
+          <div style={{fontWeight:700}}>Learnio</div>
+          <div style={{color:'var(--muted)'}}>© {new Date().getFullYear()} Learnio — built with care</div>
+        </div>
+      </footer>
+    </main>
   );
 }
