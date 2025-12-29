@@ -50,7 +50,7 @@ export default function RootLayout({
           .nav a{color:var(--foreground);text-decoration:none;opacity:.9}
           .actions{margin-left:auto;display:flex;gap:10px}
           .btn{padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-          .btn.primary{background:linear-gradient(90deg,#5b6cff,#3ad0ff);color:white}
+          .btn.primary{background:linear-gradient(90deg,#dc2626,#f87171);color:white}
           .btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--foreground)}
           @media (prefers-color-scheme: dark){
             .l-header{background:linear-gradient(180deg, rgba(8,8,8,0.6), rgba(8,8,8,0.3));border-bottom:1px solid rgba(255,255,255,0.04)}

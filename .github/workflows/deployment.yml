@@ -10,11 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout code (good practice, even if not used on server)
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ SSH into EC2 and deploy
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -33,11 +31,6 @@ jobs:
             echo "🔹 Using correct Node version"
             nvm use 24
 
-            echo "🔹 Verifying Node version"
-            which node
-            node -v
-            npm -v
-
             echo "🔹 Moving to app directory"
             cd /pratice
 
@@ -51,6 +44,9 @@ jobs:
             npm run build
 
             echo "🔹 Restarting app with PM2"
-            npm run start
-            
+            pm2 restart next-app || pm2 start npm --name next-app -- start
+
+            echo "🔹 Saving PM2 state"
+            pm2 save
+
             echo "✅ Deployment completed successfully"

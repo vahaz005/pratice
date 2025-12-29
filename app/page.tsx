@@ -27,8 +27,8 @@ export default function Vahaz() {
                 <strong>Intro to Product Design</strong>
                 <span style={{color:'var(--muted)',fontSize:12}}>12 lessons</span>
               </div>
-              <div style={{height:8,background:'#e6eefc',borderRadius:8,overflow:'hidden',marginBottom:12}}>
-                <div style={{width:'52%',height:'100%',background:'linear-gradient(90deg,var(--accent-1),var(--accent-2))'}} />
+              <div style={{height:8,background:'#fee2e2',borderRadius:8,overflow:'hidden',marginBottom:12}}>
+                <div style={{width:'52%',height:'100%',background:'linear-gradient(90deg,#dc2626,#f87171)'}} />
               </div>
               <p style={{margin:0,color:'var(--muted)',fontSize:14}}>Engaging videos, quizzes and hands-on projects. Track completions and certifications.</p>
             </div>
